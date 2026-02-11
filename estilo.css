@@ -1,5 +1,6 @@
 html {
     box-sizing: border-box;
+    overflow-x: hidden;
     /* overflow: hidden;   */
 }
 
@@ -7,10 +8,16 @@ html {
     box-sizing: inherit;   
 }
 
+
+[data-aos="fade-right"] {
+    transform: translateX(-500px);
+}
+
 body{
+    font-family: "DM Serif Text", serif;
     margin: 0;
-    height: 98vh;
-    width: 98vw;
+    min-height: 100vh;
+    width: 100%;
     background-color: #0E141B;
     color: white;
     font-size: 1.1vw;
@@ -24,6 +31,7 @@ nav {
     align-items: center;
     justify-content: center;
     position: fixed;
+    z-index: 9999;
 }
 
 nav > a {
@@ -38,6 +46,11 @@ nav > a:last-child{
 }
 #logo{
     margin-right: 15vw;
+
+    img {
+        width: 10vw;
+        height: 10vh;
+    }
 }
 .boton {
     position: relative;
@@ -83,6 +96,120 @@ nav img {
     display: flex;
     align-items: center;
     height: 100vh;
+
+    .skills {
+        margin-top: 2vh;
+        margin-bottom: 2vh;
+        padding-top: 2vh;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 0.5fr 1fr 0.5fr;
+        background-color: #44A757;
+        border-radius: 1vh;
+
+        .iconos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .skill-icon {
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            width: 4vw;
+            height: 8vh;
+        }
+
+        p {
+            color: black;
+            margin: 2vh;
+            padding: 0;
+            display: grid;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .csharp {
+            grid-column: 1 / 2;
+            grid-row: 1 / 2;
+        }
+
+        .pcsharp {
+            grid-column: 1 / 2;
+            grid-row: 2 / 3;
+        }
+
+        .mysql {
+            grid-column: 2 / 3;
+            grid-row: 1 / 2;
+        }
+        
+        .pmysql {
+            grid-column: 2 / 3;
+            grid-row: 2 / 3;
+        }
+
+        .js {
+            grid-column: 3 / 4;
+            grid-row: 1 / 2;
+        }
+
+        .pjs {
+            grid-column: 3 / 4;
+            grid-row: 2 / 3;
+        }
+
+        .python {
+            grid-column: 4 / 5;
+            grid-row: 1 / 2;
+        }
+
+        .ppython {
+            grid-column: 4 / 5;
+            grid-row: 2 / 3;
+        }
+
+        .css {
+            grid-column: 1 / 2;
+            grid-row: 3 / 4;
+        }
+
+        .pcss {
+            grid-column: 1 / 2;
+            grid-row: 4 / 5;
+        }
+
+        .html {
+            grid-column: 2 / 3;
+            grid-row: 3 / 4;
+        }
+
+        .phtml {
+            grid-column: 2 / 3;
+            grid-row: 4 / 5;
+        }
+
+        .docker {
+            grid-column: 3 / 4;
+            grid-row: 3 / 4;
+        }
+
+        .pdocker {
+            grid-column: 3 / 4;
+            grid-row: 4 / 5;
+        }
+
+        .aws {
+            grid-column: 4 / 5;
+            grid-row: 3 / 4;
+        }
+
+        .paws {
+            grid-column: 4 / 5;
+            grid-row: 4 / 5;
+        }
+    }
 }
 #sobre-mi > section{
     margin: 3vw;
@@ -112,10 +239,10 @@ nav img {
 }
 
 #proyectos {
-    height: 100vh;
+    height: 120vh;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: repeat(1, 1fr);
+    grid-template-rows: 0.5fr 1fr 0.5fr;
 
     .p {
         display: flex;
@@ -126,41 +253,68 @@ nav img {
 
         .titulo {
             padding: 3vh;
-            font-family: 'BBH Bartle', sans-serif;
             font-weight: 400;
             font-style: normal;
-            font-size: 1.5vh;
+            font-size: 2vh;
         }
         .texto {
             font-size: 1vh;
             margin: 1vw;
         }
     }
+    .pTitulo {
+        font-size: 3vh;
+        grid-column: 1 / 6;
+        grid-row: 1 / 2;
+        display: grid;
+        justify-content: center;
+        align-content: flex-end;
+    }
     .p1 {
         grid-column: 2 / 3;
+        grid-row: 2 / 3;
+
+        .ovejas {
+            width: 30vw;
+            height: 10vh;
+        }
     }
     .p2 {
         grid-column: 3 / 4;
+        grid-row: 2 / 3;
     }
     .p3 {
         grid-column: 4 / 5;
+        grid-row: 2 / 3;
     }
 }
 #contacto {
+    font-size: 1.5vh;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     height: 30vh;
+
+    h1 {
+        font-size: 4.5vh;
+    }
 }
 
 .clinks2{
     display: flex;
+    align-items: center;
+    margin: 2vh;
+
+    p {
+        margin: 0;
+        font-size: 1.75vh;
+    }
 }
 
 .clinks2 > img{
-    width: 40px;
-    height: 40px;
+    width: 2vw;
+    height: 2vh;
 }
 
 .ov-btn-grow-skew {
