@@ -351,3 +351,76 @@ nav img {
     transition: all 0.3s ease-out;
     transform: skewX(-45deg) scale(1, 1);
 }
+
+@media (max-width: 700px) {
+    body{
+        overflow-y: hidden;
+    }
+    nav{
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 1fr 2fr;
+
+        #botonContacto{
+            margin: 0;
+        }
+
+        a{
+            margin: 0;
+            padding: 0;
+            font-size: 2.5vw;
+        }
+
+        #logo{
+            margin-left: 5vw;
+            grid-column: 1 / 2;
+            display: grid;
+            img {
+                width: auto;
+                height: 5vh;
+            }
+        }
+    }
+
+    #sobre-mi{
+        height: 50vh;
+        width: auto;
+        .mi-foto > img{
+            height: 15vh;
+            width: auto;
+        }
+        aside {
+            margin-left: 5vw;
+        }
+
+        section > p {
+            font-size: 2.5vw;
+        }
+
+        .github > img{
+            height: 5vh;
+            width: auto;
+        }
+        .linkedin > img{
+            height: 5vh;
+            width: auto;
+        }
+
+        .ov-btn-grow-skew {
+            font-size: 1.3vh;
+        }
+
+        .skills {
+            width: 60vw;
+            p{
+                font-size: 2.5vw;
+            }
+            .skill-icon {
+                width: 4vw;
+                height: 4vh;
+            }
+        }
+    }
+    #proyectos {
+        height: 100vh;
+    }
+}
